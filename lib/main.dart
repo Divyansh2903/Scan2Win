@@ -5,7 +5,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scan2win/views/lottery_register.dart';
+import 'package:scan2win/views/admin/main_admin_screen.dart';
+import 'package:scan2win/views/user/lottery_register.dart';
 
 import 'firebase_options.dart';
 
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
               theme: ThemeData(
                 textTheme: GoogleFonts.poppinsTextTheme(),
               ),
-              home: LotteryRegisterScreen(),
+              home: MainAdminScreen(),
 
                  ),
            ),

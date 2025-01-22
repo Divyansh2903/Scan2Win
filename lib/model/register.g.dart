@@ -12,6 +12,7 @@ _$RegisterImpl _$$RegisterImplFromJson(Map<String, dynamic> json) =>
       phoneNumber: json['phoneNumber'] as String,
       upiId: json['upiId'] as String,
       date: DateTime.parse(json['date'] as String),
+      registrationFor: json['registrationFor'] as String,
       slipDownloadUrl: json['slipDownloadUrl'] as String,
     );
 
@@ -21,5 +22,6 @@ Map<String, dynamic> _$$RegisterImplToJson(_$RegisterImpl instance) =>
       'phoneNumber': instance.phoneNumber,
       'upiId': instance.upiId,
       'date': instance.date.toIso8601String(),
+      'registrationFor': instance.registrationFor,
       'slipDownloadUrl': instance.slipDownloadUrl,
     };

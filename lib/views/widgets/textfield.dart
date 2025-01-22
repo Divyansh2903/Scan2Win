@@ -3,8 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:scan2win/core/utils/web_helper.dart';
 
-import '../constants/colors.dart';
-import '../constants/textstyles.dart';
+import '../../core/constants/colors.dart';
+import '../../core/constants/textstyles.dart';
+
 
 Widget buildTextField(String hint, TextEditingController controller,
     bool isMultiLine, BuildContext context,

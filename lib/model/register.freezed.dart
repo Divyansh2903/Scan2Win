@@ -24,6 +24,7 @@ mixin _$Register {
   String get phoneNumber => throw _privateConstructorUsedError;
   String get upiId => throw _privateConstructorUsedError;
   DateTime get date => throw _privateConstructorUsedError;
+  String get registrationFor => throw _privateConstructorUsedError;
   String get slipDownloadUrl => throw _privateConstructorUsedError;
 
   /// Serializes this Register to a JSON map.
@@ -46,6 +47,7 @@ abstract class $RegisterCopyWith<$Res> {
       String phoneNumber,
       String upiId,
       DateTime date,
+      String registrationFor,
       String slipDownloadUrl});
 }
 
@@ -68,6 +70,7 @@ class _$RegisterCopyWithImpl<$Res, $Val extends Register>
     Object? phoneNumber = null,
     Object? upiId = null,
     Object? date = null,
+    Object? registrationFor = null,
     Object? slipDownloadUrl = null,
   }) {
     return _then(_value.copyWith(
@@ -87,6 +90,10 @@ class _$RegisterCopyWithImpl<$Res, $Val extends Register>
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      registrationFor: null == registrationFor
+          ? _value.registrationFor
+          : registrationFor // ignore: cast_nullable_to_non_nullable
+              as String,
       slipDownloadUrl: null == slipDownloadUrl
           ? _value.slipDownloadUrl
           : slipDownloadUrl // ignore: cast_nullable_to_non_nullable
@@ -108,6 +115,7 @@ abstract class _$$RegisterImplCopyWith<$Res>
       String phoneNumber,
       String upiId,
       DateTime date,
+      String registrationFor,
       String slipDownloadUrl});
 }
 
@@ -128,6 +136,7 @@ class __$$RegisterImplCopyWithImpl<$Res>
     Object? phoneNumber = null,
     Object? upiId = null,
     Object? date = null,
+    Object? registrationFor = null,
     Object? slipDownloadUrl = null,
   }) {
     return _then(_$RegisterImpl(
@@ -147,6 +156,10 @@ class __$$RegisterImplCopyWithImpl<$Res>
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      registrationFor: null == registrationFor
+          ? _value.registrationFor
+          : registrationFor // ignore: cast_nullable_to_non_nullable
+              as String,
       slipDownloadUrl: null == slipDownloadUrl
           ? _value.slipDownloadUrl
           : slipDownloadUrl // ignore: cast_nullable_to_non_nullable
@@ -163,6 +176,7 @@ class _$RegisterImpl extends _Register with DiagnosticableTreeMixin {
       required this.phoneNumber,
       required this.upiId,
       required this.date,
+      required this.registrationFor,
       required this.slipDownloadUrl})
       : super._();
 
@@ -178,11 +192,13 @@ class _$RegisterImpl extends _Register with DiagnosticableTreeMixin {
   @override
   final DateTime date;
   @override
+  final String registrationFor;
+  @override
   final String slipDownloadUrl;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Register(name: $name, phoneNumber: $phoneNumber, upiId: $upiId, date: $date, slipDownloadUrl: $slipDownloadUrl)';
+    return 'Register(name: $name, phoneNumber: $phoneNumber, upiId: $upiId, date: $date, registrationFor: $registrationFor, slipDownloadUrl: $slipDownloadUrl)';
   }
 
   @override
@@ -194,6 +210,7 @@ class _$RegisterImpl extends _Register with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('phoneNumber', phoneNumber))
       ..add(DiagnosticsProperty('upiId', upiId))
       ..add(DiagnosticsProperty('date', date))
+      ..add(DiagnosticsProperty('registrationFor', registrationFor))
       ..add(DiagnosticsProperty('slipDownloadUrl', slipDownloadUrl));
   }
 
@@ -207,14 +224,16 @@ class _$RegisterImpl extends _Register with DiagnosticableTreeMixin {
                 other.phoneNumber == phoneNumber) &&
             (identical(other.upiId, upiId) || other.upiId == upiId) &&
             (identical(other.date, date) || other.date == date) &&
+            (identical(other.registrationFor, registrationFor) ||
+                other.registrationFor == registrationFor) &&
             (identical(other.slipDownloadUrl, slipDownloadUrl) ||
                 other.slipDownloadUrl == slipDownloadUrl));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, name, phoneNumber, upiId, date, slipDownloadUrl);
+  int get hashCode => Object.hash(runtimeType, name, phoneNumber, upiId, date,
+      registrationFor, slipDownloadUrl);
 
   /// Create a copy of Register
   /// with the given fields replaced by the non-null parameter values.
@@ -238,6 +257,7 @@ abstract class _Register extends Register {
       required final String phoneNumber,
       required final String upiId,
       required final DateTime date,
+      required final String registrationFor,
       required final String slipDownloadUrl}) = _$RegisterImpl;
   const _Register._() : super._();
 
@@ -252,6 +272,8 @@ abstract class _Register extends Register {
   String get upiId;
   @override
   DateTime get date;
+  @override
+  String get registrationFor;
   @override
   String get slipDownloadUrl;
 

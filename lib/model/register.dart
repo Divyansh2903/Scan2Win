@@ -11,7 +11,7 @@ class Register with _$Register {
   const factory Register(
       {required String name,
 
-        required String phoneNumber,required String upiId, required DateTime date, required String slipDownloadUrl}) = _Register;
+        required String phoneNumber,required String upiId, required DateTime date,required String registrationFor, required String slipDownloadUrl}) = _Register;
 
   factory Register.fromJson(Map<String, dynamic> json) => _$RegisterFromJson(json);
 }

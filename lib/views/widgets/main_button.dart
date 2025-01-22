@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../constants/colors.dart';
-import '../constants/textstyles.dart';
+import '../../core/constants/colors.dart';
+import '../../core/constants/textstyles.dart';
+
 
 class LargeButton extends StatelessWidget {
   final String icon;

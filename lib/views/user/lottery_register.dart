@@ -8,13 +8,13 @@ import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:scan2win/core/constants/colors.dart';
 import 'package:scan2win/core/utils/snackbar.dart';
-import 'package:scan2win/core/utils/web_helper.dart';
 import 'package:scan2win/model/register.dart';
 
-import '../core/constants/textstyles.dart';
-import '../core/services/firebase_services.dart';
-import '../core/widgets/main_button.dart';
-import '../core/widgets/textfield.dart';
+import '../../core/constants/textstyles.dart';
+import '../../core/services/firebase_services.dart';
+import '../widgets/main_button.dart';
+import '../widgets/textfield.dart';
+
 
 class LotteryRegisterScreen extends StatefulWidget {
 
@@ -29,8 +29,11 @@ class _LotteryRegisterScreenState extends State<LotteryRegisterScreen> {
 
   final TextEditingController _phoneNumberController = TextEditingController();
   final TextEditingController _upiIdController = TextEditingController();
+   String registrationFor="";
   bool isLoading=false;
   File? _imageFile;
+
+
 
   Future<void> _registerLottery() async {
 
@@ -44,7 +47,7 @@ setState(() {
     if (name.isEmpty || phoneNumber.isEmpty) {
       showSnackBar(context, "Name and Phone Number are required");
     } else {
-      Register registration=Register(name: name, phoneNumber: phoneNumber, upiId: upiId, date:currentDate, slipDownloadUrl: "");
+      Register registration=Register(name: name, phoneNumber: phoneNumber, upiId: upiId, date:currentDate, slipDownloadUrl: "",registrationFor: registrationFor);
       await FirebaseServices().saveRegisterData("lottery", registration);
     showSnackBar(context, "Registration Successful");
 
@@ -60,6 +63,7 @@ setState(() {
     final lotteryDate=date.add(Duration(days: daysToAdd));
     final DateFormat formatter = DateFormat.MMMMEEEEd();
     final String formatted = formatter.format(lotteryDate);
+    registrationFor=formatted.toString();
     return formatted;
   }
 
