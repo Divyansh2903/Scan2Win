@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
              child: MaterialApp(
 
               debugShowCheckedModeBanner: false,
-              title: 'Pulse',
+              title: 'Scan 2 Win',
               theme: ThemeData(
                 textTheme: GoogleFonts.poppinsTextTheme(),
               ),
