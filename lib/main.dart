@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
               theme: ThemeData(
                 textTheme: GoogleFonts.poppinsTextTheme(),
               ),
-              home: MainAdminScreen(),
+              home: LotteryRegisterScreen(),
 
                  ),
            ),

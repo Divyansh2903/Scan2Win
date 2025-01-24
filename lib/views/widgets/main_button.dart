@@ -23,7 +23,7 @@ class LargeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: ScreenUtil().setHeight(48),
+      height: ScreenUtil().setHeight(50),
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
